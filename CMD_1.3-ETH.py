@@ -15,9 +15,9 @@ def run():
     try:
         while 5 > 1:
             webUrl = urllib.request.urlopen('https://keys.lol/ethereum/random')
-            time.sleep(5)
+            time.sleep(10)
             data = webUrl.read()
-            result = re.findall(r"[-+]?\d*\.\d+|\d+", str(data))
+            result = re.findall("[+-]?\d+\.\d+", str(data))
             for i in result:
                 if str(i) + " eth" in str(data):
                     if float(i) > 0:

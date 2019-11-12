@@ -17,7 +17,7 @@ def run():
             webUrl = urllib.request.urlopen('https://keys.lol/bitcoin/random')
             time.sleep(5)
             data = webUrl.read()
-            result = re.findall(r"[-+]?\d*\.\d+|\d+", str(data))
+            result = re.findall("[+-]?\d+\.\d+", str(data))
             for i in result:
                 if str(i) + " btc" in str(data):
                     if float(i) > 0:
