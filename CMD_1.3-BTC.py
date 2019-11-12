@@ -1,29 +1,33 @@
-import urllib.request
-import time
 import sys
 import os
 import re
-import threading
+from requests_html import HTMLSession
+import random
 
 pages = 0
-print("Loaded Auto keys.lol CMD VERSION 1.3")
-threadCount = input('How many threads to run: ')
+print("Loaded Auto keys.lol bitcoin CMD VERSION 1.3")
 print("Started search...")
 
 
 def run():
     try:
         while 5 > 1:
-            webUrl = urllib.request.urlopen('https://keys.lol/bitcoin/random')
-            time.sleep(5)
-            data = webUrl.read()
+            #webUrl = urllib.request.urlopen('https://keys.lol/ethereum/1')
+            pageNum = random.randrange(1,904625697166532776746648320380374280100293470930272690489102837043110636675)
+            fullurl = 'https://keys.lol/bitcoin/'+str(pageNum)
+            session = HTMLSession()
+            webUrl = session.get(fullurl)
+            #time.sleep(10)
+            webUrl.html.render()
+            #html = webUrl.content
+            data = webUrl.html.html
             result = re.findall("[+-]?\d+\.\d+", str(data))
             for i in result:
                 if str(i) + " btc" in str(data):
                     if float(i) > 0:
-                        with open('ValidWallets.txt', 'a') as appendFile:
+                        with open('ValidWalletsBTC.txt', 'a') as appendFile:
                             appendFile.write('{} btc\n'.format(str(i)))
-                            appendFile.write('{}\n'.format(webUrl.geturl()))
+                            appendFile.write('{}\n'.format(fullurl))
             global pages
             pages = pages + 1
             sys.stdout.write("\rPages read: {}".format(str(pages)))
@@ -32,6 +36,7 @@ def run():
         os.execv(sys.executable, ['python'] + sys.argv)
 
 
-for i in range(int(threadCount)):
-    thread = threading.Thread(target=run)
-    thread.start()
+#for i in range(int(threadCount)):
+    #thread = threading.Thread(target=run)
+    #thread.start()
+run()
