@@ -5,7 +5,7 @@ The program automatically searches the keys.lol site for any active wallets and 
 Download the Python 3.7 installer and run it. Select custom installation and make sure the add to PATH box is checked. All the components should be installed with python. run ```pip install requests_html``` to intstall the components
 
 # Usage
-Running the CMD_1.3.py program will open a cmd window that will automatically search for keys. The GUI_1.0.py program will open a cmd and a Auto keys GUI VERSION 1.0 window. Click start on the Auto keys GUI VERSION 1.0 window and it will start searching for keys. Enjoy!
+Running the CMD_1.4-BTC.py or CMD_1.4-ETH.py program will open a cmd window that will automatically search for keys and log the page address in a file. Enjoy!
 
-# VERSION 1.3 release notes
+# VERSION 1.4 release notes
 Removed multi-threading but replaced the algorithm with a faster one
