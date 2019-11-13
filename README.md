@@ -8,4 +8,4 @@ Download the Python 3.7 installer and run it. Select custom installation and mak
 Running the CMD_1.3.py program will open a cmd window that will automatically search for keys. The GUI_1.0.py program will open a cmd and a Auto keys GUI VERSION 1.0 window. Click start on the Auto keys GUI VERSION 1.0 window and it will start searching for keys. Enjoy!
 
 # VERSION 1.3 release notes
-Added multithreading for the CMD version to allow great improvements in search speed.
+Removed multi-threading but replaced the algorithm with a faster one
