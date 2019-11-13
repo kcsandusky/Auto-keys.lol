@@ -5,7 +5,7 @@ from requests_html import HTMLSession
 import random
 
 pages = 0
-print("Loaded Auto keys.lol ethereum CMD VERSION 1.3")
+print("Loaded Auto keys.lol ethereum CMD VERSION 1.4")
 threadCount = input('How many threads to run: ')
 print("Started search...")
 

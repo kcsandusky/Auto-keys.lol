@@ -5,7 +5,7 @@ from requests_html import HTMLSession
 import random
 
 pages = 0
-print("Loaded Auto keys.lol bitcoin CMD VERSION 1.3")
+print("Loaded Auto keys.lol bitcoin CMD VERSION 1.4")
 print("Started search...")
 
 
