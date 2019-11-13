@@ -33,6 +33,8 @@ def run():
             pages = pages + 1
             sys.stdout.write("\rPages read: {}".format(str(pages)))
             sys.stdout.flush()
+            session.close()
+            webUrl.close()
     except TimeoutError:
         os.execv(sys.executable, ['python'] + sys.argv)
 
