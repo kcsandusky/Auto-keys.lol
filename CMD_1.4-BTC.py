@@ -35,7 +35,7 @@ def run():
             session.close()
             webUrl.close()
     except TimeoutError:
-        os.execv(sys.executable, ['python'] + sys.argv)
+        run()
 
 
 #for i in range(int(threadCount)):
