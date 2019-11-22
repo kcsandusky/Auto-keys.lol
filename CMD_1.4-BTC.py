@@ -34,7 +34,7 @@ def run():
             sys.stdout.flush()
             session.close()
             webUrl.close()
-    except TimeoutError:
+    except:
         run()
 
 
